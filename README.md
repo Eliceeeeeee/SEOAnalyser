@@ -8,6 +8,7 @@ A .NET web application that performs a simple SEO analysis of the text
 To run this web application, you'll need:
 
 * Visual studio 2015  
+* Make sure you are connect to internet
 
 1. download this zip folder and extract it.
 2. Use Visual Studio to open this project `SEOAnalyser.sln`.
