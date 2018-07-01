@@ -22,9 +22,3 @@ select,
 textarea {
     max-width: 280px;
 }
-.k-grid table{
-	width: 30% !important;
-}
-table{
-	max-width: 30% !important;
-}

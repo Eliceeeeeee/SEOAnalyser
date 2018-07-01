@@ -7,16 +7,12 @@
 			.Columns(columns =>
 			{
 				columns.Bound(x => x.WordInPage)
-					.Sortable(true)
-					.Title("Word In Page")
-					.Width(240);
+					.Sortable(false)
+					.Title("Word In Page");
 				columns.Bound(x => x.NoOfWordInPage)
-					.Sortable(true)
-					.Title("No Of Word In Page")
-					.Width(50);
+					.Sortable(false)
+					.Title("No Of Word In Page");
 			})
-			.Resizable(resize => resize.Columns(true))
 			.DataSource(datasource => datasource.Server())
-			.Sortable()
 	)
 }

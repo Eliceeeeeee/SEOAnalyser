@@ -7,16 +7,12 @@
 			.Columns(columns =>
 			{
 				columns.Bound(x => x.ExternalLink)
-					.Sortable(true)
-					.Title("External Link")
-					.Width(240);
+					.Sortable(false)
+					.Title("External Link");
 				columns.Bound(x => x.NoOfExternalLinks)
-					.Sortable(true)
-					.Title("No Of External Link In Page")
-					.Width(50);
+					.Sortable(false)
+					.Title("No Of External Link In Page");
 			})
-			.Resizable(resize => resize.Columns(true))
 			.DataSource(datasource => datasource.Server())
-			.Sortable()
 	)
 }

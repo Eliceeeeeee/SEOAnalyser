@@ -6,3 +6,11 @@ D:\Elice_EeHuayFoung\SEOAnalyser\SEOAnalyser.Business\bin\Debug\HtmlAgilityPack.
 D:\Elice_EeHuayFoung\SEOAnalyser\SEOAnalyser.Business\bin\Debug\HtmlAgilityPack.pdb
 D:\Elice_EeHuayFoung\SEOAnalyser\SEOAnalyser.Business\bin\Debug\HtmlAgilityPack.xml
 D:\Elice_EeHuayFoung\SEOAnalyser\SEOAnalyser.Business\obj\Debug\SEOAnalyser.Business.csprojResolveAssemblyReference.cache
+D:\wsDeveloper\GitHub\SEOAnalyser\SEOAnalyser.Business\bin\Debug\SEOAnalyser.Business.dll
+D:\wsDeveloper\GitHub\SEOAnalyser\SEOAnalyser.Business\bin\Debug\SEOAnalyser.Business.pdb
+D:\wsDeveloper\GitHub\SEOAnalyser\SEOAnalyser.Business\bin\Debug\HtmlAgilityPack.dll
+D:\wsDeveloper\GitHub\SEOAnalyser\SEOAnalyser.Business\bin\Debug\HtmlAgilityPack.pdb
+D:\wsDeveloper\GitHub\SEOAnalyser\SEOAnalyser.Business\bin\Debug\HtmlAgilityPack.xml
+D:\wsDeveloper\GitHub\SEOAnalyser\SEOAnalyser.Business\obj\Debug\SEOAnalyser.Business.csprojResolveAssemblyReference.cache
+D:\wsDeveloper\GitHub\SEOAnalyser\SEOAnalyser.Business\obj\Debug\SEOAnalyser.Business.dll
+D:\wsDeveloper\GitHub\SEOAnalyser\SEOAnalyser.Business\obj\Debug\SEOAnalyser.Business.pdb

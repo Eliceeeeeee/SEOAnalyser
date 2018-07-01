@@ -24,7 +24,8 @@ namespace SEOAnalyser.Web.Business
 		{
 			foreach (string word in StopWords)
 			{
-				input = input.Replace(word, "");
+				string regexp = @"(?i)\s?\b" + word + @"\b\s?";
+				input = Regex.Replace(input, regexp, " ");
 			}
 			return input;
 		}
@@ -80,11 +81,7 @@ namespace SEOAnalyser.Web.Business
 		{
 			if (isFilterStopWords)
 			{
-				foreach (string word in StopWords)
-				{
-					string regexp = @"(?i)\s?\b" + word + @"\b\s?";
-					input = Regex.Replace(input, regexp, " ");
-				}
+				input = FilterStopWords(input);
 			}
 
 			string[] resultAraray = input.Split(Seperators, StringSplitOptions.RemoveEmptyEntries);
