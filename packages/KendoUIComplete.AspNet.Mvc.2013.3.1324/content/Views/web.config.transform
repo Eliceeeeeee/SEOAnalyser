@@ -1,0 +1,9 @@
+<configuration>
+	<system.web.webPages.razor>
+		<pages>
+			<namespaces>
+				<add namespace="Kendo.Mvc.UI" />
+			</namespaces>
+		</pages>
+	</system.web.webPages.razor>
+</configuration>

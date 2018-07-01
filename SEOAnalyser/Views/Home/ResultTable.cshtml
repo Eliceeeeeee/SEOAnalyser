@@ -1,0 +1,17 @@
+﻿@using SEOAnalyser.Web.Models
+@model SeoAnalyserMainModel
+@{
+	ViewBag.Title = "Home Page";
+}
+@if (Model.OutputViewModel.WordsInPage != null)
+{
+	@Html.Partial("_WordsInPageTable", Model.OutputViewModel.WordsInPage)
+}
+@if (Model.OutputViewModel.WordsInMetaTags != null)
+{
+	@Html.Partial("_WordsInMetaTagsTable", Model.OutputViewModel.WordsInMetaTags)
+}
+@if (Model.OutputViewModel.ExternalLinks != null)
+{
+	@Html.Partial("_ExternalLinksTable", Model.OutputViewModel.ExternalLinks)
+}

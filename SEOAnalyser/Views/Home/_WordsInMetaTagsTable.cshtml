@@ -1,0 +1,23 @@
+﻿
+@using Kendo.Mvc.UI
+@model IEnumerable<SEOAnalyser.Web.Models.WordsInMetaTagsViewModel>
+@if (Model != null)
+{
+	@(Html.Kendo().Grid(Model)
+			.Name("WordsInMetaTagsTable")
+			.Columns(columns =>
+			{
+				columns.Bound(x => x.WordInMetaTag)
+					.Sortable(true)
+					.Title("Word In Meta Tag")
+					.Width(240);
+				columns.Bound(x => x.NoOfWordInMetaTags)
+					.Sortable(true)
+					.Title("No Of Word In Meta Tag")
+					.Width(50);
+			})
+			.Resizable(resize => resize.Columns(true))
+			.DataSource(datasource => datasource.Server())
+			.Sortable()
+	)
+}

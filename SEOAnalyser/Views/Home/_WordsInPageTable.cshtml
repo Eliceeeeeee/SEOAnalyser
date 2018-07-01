@@ -1,0 +1,22 @@
+﻿@using Kendo.Mvc.UI
+@model IEnumerable<SEOAnalyser.Web.Models.WordsInPageViewModel>
+@if (Model != null)
+{
+	@(Html.Kendo().Grid(Model)
+			.Name("WordsInPageTable")
+			.Columns(columns =>
+			{
+				columns.Bound(x => x.WordInPage)
+					.Sortable(true)
+					.Title("Word In Page")
+					.Width(240);
+				columns.Bound(x => x.NoOfWordInPage)
+					.Sortable(true)
+					.Title("No Of Word In Page")
+					.Width(50);
+			})
+			.Resizable(resize => resize.Columns(true))
+			.DataSource(datasource => datasource.Server())
+			.Sortable()
+	)
+}

@@ -1,0 +1,74 @@
+﻿@using SEOAnalyser.Web.Models
+@model SeoAnalyserMainModel
+@{
+	ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+	<h3>SEO Analyser</h3>
+	@using (Html.BeginForm("Analysis", "Home", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+	{
+		@Html.AntiForgeryToken()
+		<hr />
+		@Html.ValidationSummary("", new { @class = "text-danger" })
+		<div class="form-group">
+			@Html.LabelFor(m => m.InputViewModel.Input, new { @class = "col-md-2 control-label" })
+			<div class="col-md-10">
+				@Html.TextAreaFor(m => m.InputViewModel.Input, new { @class = "form-control inputTextArea", rows = "6" })
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="col-md-3">
+				<div class="checkbox col-md-1">
+					@Html.CheckBoxFor(model => model.InputViewModel.IsFilterStopWords)
+				</div>
+				@Html.Label("Filter Stop Words", new { @class = "control-label col-md-10" })
+			</div>
+			<div class="col-md-3">
+				<div class="checkbox col-md-1">
+					@Html.CheckBoxFor(model => model.InputViewModel.IsCalculateNoOfWordInPage)
+				</div>
+				@Html.Label("Get Number of Words from URL/Text", new { @class = "control-label col-md-10" })
+			</div>
+			<div class="col-md-3">
+				<div class="checkbox col-md-1">
+					@Html.CheckBoxFor(model => model.InputViewModel.IsCalculateNoOfWordInMetaTags)
+				</div>
+				@Html.Label("Get Meta Tag info in URL", new { @class = "control-label col-md-10" })
+			</div>
+			<div class="col-md-3">
+				<div class="checkbox col-md-1">
+					@Html.CheckBoxFor(model => model.InputViewModel.IsCalculateNoOfExternalLinks)
+				</div>
+				@Html.Label("Get All external links from URL/Text", new { @class = "control-label col-md-10" })
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="col-md-10">
+				<input type="submit" class="btn btn-default" value="Submit" />
+			</div>
+		</div>
+	}
+</div>
+
+@if (Model.OutputViewModel != null)
+{
+	<div class="col-md-3">
+		@if (Model.OutputViewModel.WordsInPages != null)
+		{
+			@Html.Partial("_WordsInPageTable", Model.OutputViewModel.WordsInPages)
+		}
+	</div>
+	<div class="col-md-3">
+		@if (Model.OutputViewModel.WordsInMetaTags != null)
+		{
+		@Html.Partial("_WordsInMetaTagsTable", Model.OutputViewModel.WordsInMetaTags)
+		}
+	</div>
+	<div class="col-md-6">
+		@if (Model.OutputViewModel.ExternalLinks != null)
+		{
+			@Html.Partial("_ExternalLinksTable", Model.OutputViewModel.ExternalLinks)
+		}
+	</div>
+}
